@@ -1,0 +1,36 @@
+.HangmanPic{
+    width: 200px;
+    height: 200px;
+
+ 
+}
+
+.HangmanPicImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.BodyGame{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.BodyGameBtnParent{
+    width: 250px
+}
+.BodyGameBtn{
+    width: 50px;
+    padding: 20px;
+}
+
+.DealTom{
+    color: #fff;
+}
+
+.DealTomText{
+    color:red;
+}
