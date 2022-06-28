@@ -10,7 +10,7 @@ const Words = ({ health, showLetters }) => {
     health.sethealth(9);
     showLetters.setShowLetter(false);
     let randomNum = Math.floor(Math.random() * hangman.cities.length);
-    return setWord(hangman.cities[randomNum]);
+    return setWord(hangman.cities[randomNum].toLowerCase());
   };
   useEffect(() => {
     if (word?.indexOf(" ") !== -1) {
@@ -54,13 +54,13 @@ const Words = ({ health, showLetters }) => {
 
   return (
     <div className={`${HomeCss.BodyGame}`}>
-      <p>{chooseLetter}</p>
+      <p className="h2">{chooseLetter}</p>
       <p>{showLetters.showLetter && chooseLetter === word && "Qalib"}</p>
       <div className={`${HomeCss.BodyGameBtnParent}`}>
         {health.health !== 0
           ? hangman.letters.map((item, index) => (
               <button
-                className={`${HomeCss.BodyGameBtn}`}
+                className={`${HomeCss.BodyGameBtn} mb-2`}
                 disabled={!clicked || (chooseLetter === word && true)}
                 onClick={(e) => btnClick(e)}
                 key={index}
@@ -68,15 +68,19 @@ const Words = ({ health, showLetters }) => {
                 {item}
               </button>
             ))
-          : `Meglub Oldunuz . Lazim olan soz ${word}`}
+          : <h1>Lose Game , Try Again</h1>}
       </div>
       {!clicked && (
+        <>
+        
         <h2>
-          <span>I</span>t's time to<span>deal with tom</span>{" "}
+          <span>I</span>t's time to<span> deal with tom</span>{" "}
         </h2>
+        
+        </>
       )}
-      <button className="btn btn-primary mt-1" onClick={changeWord}>
-        Yeni oyun
+      <button className="btn btn-primary mt-2" onClick={changeWord}>
+        New Game
       </button>
     </div>
   );

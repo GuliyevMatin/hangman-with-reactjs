@@ -8,6 +8,7 @@
     "f",
     "g",
     "h",
+    "i",
     "j",
     "k",
     "l",
@@ -18,10 +19,13 @@
     "q",
     "r",
     "s",
+    "t",
+    "u",
+    "v",
     "w",
     "x",
     "y",
     "z"
   ],
-  "cities": ["baki", "new york", "london", "sydney"]
+  "cities": [ "Sydney","London", "Los Angeles", "Miami", "San Francisco"]
 }
